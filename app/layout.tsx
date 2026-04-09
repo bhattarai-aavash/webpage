@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Aavash Sharma | Portfolio",
+  title: "Aavash Bhattarai | Portfolio",
   description: "Personal portfolio for job search and freelance opportunities."
 };
 
