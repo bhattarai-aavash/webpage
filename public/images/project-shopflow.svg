@@ -1,0 +1,5 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#111827"/>
+  <rect x="80" y="80" width="1040" height="540" rx="24" fill="#1F2937" stroke="#374151"/>
+  <text x="600" y="360" dominant-baseline="middle" text-anchor="middle" fill="#E5E7EB" font-family="Arial" font-size="56">ShopFlow Commerce</text>
+</svg>
