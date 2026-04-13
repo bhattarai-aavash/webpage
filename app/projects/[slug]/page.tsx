@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
+import { withBasePath } from "@/lib/basePath";
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
@@ -33,7 +34,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
           <div className="mt-8 overflow-hidden rounded-xl border border-white/10">
             <Image
-              src={project.image ?? "/images/project-analytics.svg"}
+              src={withBasePath(project.image ?? "/images/project-analytics.svg")}
               alt={project.title}
               width={1200}
               height={700}

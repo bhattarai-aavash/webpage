@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project } from "@/lib/types";
+import { withBasePath } from "@/lib/basePath";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 interface ProjectCardProps {
@@ -19,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="overflow-hidden rounded-xl border border-white/10">
         <Image
-          src={project.image ?? "/images/project-analytics.svg"}
+          src={withBasePath(project.image ?? "/images/project-analytics.svg")}
           alt={project.title}
           width={800}
           height={500}

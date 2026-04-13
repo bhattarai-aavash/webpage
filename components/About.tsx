@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { about, personalInfo } from "@/lib/data";
+import { withBasePath } from "@/lib/basePath";
 
 export default function About() {
   return (
@@ -31,7 +32,7 @@ export default function About() {
           <div className="mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-surface">
               <Image
-                src={about.profileImage}
+                src={withBasePath(about.profileImage)}
                 alt={`${personalInfo.name} — profile photo`}
                 width={500}
                 height={600}

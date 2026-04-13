@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { personalInfo } from "@/lib/data";
+import { withBasePath } from "@/lib/basePath";
 
 const item = {
   hidden: { opacity: 0, y: 24 },
@@ -35,7 +36,7 @@ export default function Hero() {
               View Work
             </a>
             <a
-              href={personalInfo.resumeUrl}
+              href={withBasePath(personalInfo.resumeUrl)}
               className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               Download Resume
