@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/data";
@@ -33,12 +32,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <p className="mt-4 text-muted">{project.description}</p>
 
           <div className="mt-8 overflow-hidden rounded-xl border border-white/10">
-            <Image
+            <img
               src={withBasePath(project.image ?? "/images/project-analytics.svg")}
               alt={project.title}
               width={1200}
               height={700}
               className="h-auto w-full"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

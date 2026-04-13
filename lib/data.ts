@@ -8,16 +8,8 @@ export const personalInfo = {
   phone: "307-761-9567",
   location: "Laramie, Wyoming",
   github: "https://github.com/bhattarai-aavash",
-  linkedin: "", // TODO: add your LinkedIn URL
+  linkedin: "https://www.linkedin.com/in/aavash-bhattarai-256281141/?skipRedirect=true", 
   resumeUrl: "/resume.pdf",
-};
-
-// Contact form: sign up at https://formspree.io with recipientEmail, create a new form, then paste the form ID
-// (the part after /f/ in https://formspree.io/f/xxxxxxxx). Submissions are emailed to that Formspree account.
-// Alternatively set NEXT_PUBLIC_FORMSPREE_FORM_ID in .env.local or GitHub Actions env.
-export const contactForm = {
-  recipientEmail: "aavashbhattarai@gmail.com",
-  formspreeFormId: "" as string, // e.g. "xvgwyzab" — required for the form to send mail
 };
 
 export const about = {

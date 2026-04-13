@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Project } from "@/lib/types";
-import { withBasePath } from "@/lib/basePath";
+import { publicAssetUrl } from "@/lib/basePath";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 interface ProjectCardProps {
@@ -19,12 +18,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="group rounded-2xl border border-white/10 bg-surface p-4 shadow-sm"
     >
       <div className="overflow-hidden rounded-xl border border-white/10">
-        <Image
-          src={withBasePath(project.image ?? "/images/project-analytics.svg")}
+        <img
+          src={publicAssetUrl(project.image ?? "/images/project-analytics.svg")}
           alt={project.title}
           width={800}
           height={500}
           className="h-48 w-full object-cover transition duration-300 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <h3 className="mt-4 text-xl font-semibold text-white">{project.title}</h3>
