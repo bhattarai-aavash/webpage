@@ -21,6 +21,7 @@ export const contactForm = {
 };
 
 export const about = {
+  profileImage: "/images/aavash.jpeg",
   bio: `Computer Science Graduate Student at the University of Wyoming specializing in AI-powered software systems, Large Language Models, and Agentic Systems. I build production-grade AI applications — LLM microservices, document intelligence pipelines, and real-time inference systems — backed by strong foundations in backend APIs, distributed systems, and data engineering.`,
   stats: [
     { label: "Years of Experience", value: "2+" },

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { about } from "@/lib/data";
+import { about, personalInfo } from "@/lib/data";
 
 export default function About() {
   return (
@@ -31,8 +31,8 @@ export default function About() {
           <div className="mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-surface">
               <Image
-                src="aavash.jpeg"
-                alt="Profile placeholder"
+                src={about.profileImage}
+                alt={`${personalInfo.name} — profile photo`}
                 width={500}
                 height={600}
                 className="h-auto w-full object-cover"
