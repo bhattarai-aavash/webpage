@@ -12,6 +12,14 @@ export const personalInfo = {
   resumeUrl: "/resume.pdf",
 };
 
+// Contact form: sign up at https://formspree.io with recipientEmail, create a new form, then paste the form ID
+// (the part after /f/ in https://formspree.io/f/xxxxxxxx). Submissions are emailed to that Formspree account.
+// Alternatively set NEXT_PUBLIC_FORMSPREE_FORM_ID in .env.local or GitHub Actions env.
+export const contactForm = {
+  recipientEmail: "aavashbhattarai@gmail.com",
+  formspreeFormId: "" as string, // e.g. "xvgwyzab" — required for the form to send mail
+};
+
 export const about = {
   bio: `Computer Science Graduate Student at the University of Wyoming specializing in AI-powered software systems, Large Language Models, and Agentic Systems. I build production-grade AI applications — LLM microservices, document intelligence pipelines, and real-time inference systems — backed by strong foundations in backend APIs, distributed systems, and data engineering.`,
   stats: [
@@ -94,10 +102,40 @@ export const projects = [
     details: `Processed 70M+ trip records using Apache Spark to analyze large-scale user behavior and temporal demand patterns. Applied FP-Growth mining to identify recurring usage segments (commuter vs. off-peak users) and developed Power BI dashboards to visualize spatio-temporal trends and station utilization.`,
     image: "/images/project-analytics.svg",
     tech: ["Apache Spark", "FP-Growth", "Power BI", "Python", "Pandas"],
-    github: "", // TODO: add GitHub link
+    github: "", 
     demo: "",
   },
-  // TODO: Add more projects here
+ 
+  {
+    slug: "wyoming-plant-classification",
+    title: "Wyoming Plant Classification System",
+    description: "Built an end-to-end pipeline for multi-class invasive plant detection using GroundedSAM for zero-shot annotation and YOLOv8 for object detection, achieving 85% mAP@50 across 3 plant species. Automated dataset generation, multi-class merging, and video inference with OpenCV.",
+    details: `Built an end-to-end pipeline for multi-class invasive plant detection using GroundedSAM for zero-shot annotation and YOLOv8 for object detection, achieving 85% mAP@50 across 3 plant species. Automated dataset generation, multi-class merging, and video inference with OpenCV.`,
+    image: "/images/project-analytics.svg",
+    tech: ["Python", "Pandas", "OpenCV", "GroundedSAM", "YOLOv8", "NVIDIA Jetson", "Zero-shot Annotation", "Object Detection", "Video Inference", "Semantic Segmentation"],
+    github: "https://github.com/bhattarai-aavash/wyoming-plant-recognition", 
+    demo: "",
+  },
+  {
+    slug: "document-q-a",
+    title: "Document Question Answering System",
+    description: "Built an end-to-end pipeline for multi-class invasive plant detection using GroundedSAM for zero-shot annotation and YOLOv8 for object detection, achieving 85% mAP@50 across 3 plant species. Automated dataset generation, multi-class merging, and video inference with OpenCV.",
+    details: `Built an end-to-end pipeline for multi-class invasive plant detection using GroundedSAM for zero-shot annotation and YOLOv8 for object detection, achieving 85% mAP@50 across 3 plant species. Automated dataset generation, multi-class merging, and video inference with OpenCV.`,
+    image: "/images/project-analytics.svg",
+    tech: ["Donut", "Streamlit", "Python", "HuggingFace", "Document Information Extraction", "Question Answering"],
+    github: "https://github.com/bhattarai-aavash/Document_Q-A", 
+    demo: "",
+  },
+  {
+    slug: "alex-the-pt",
+    title: "Alex The Personal Trainer",
+    description: "A full-stack multi-agent AI chatbot (Next.js + Tailwind, FastAPI + LangGraph) using Groq-hosted Llama-4- Scout. Designed a cost-aware multi-model routing pipeline that routes text interactions through cheaper models and invokes the multimodal model only on image upload. Implemented stateful conversation management, structured JSON outputs, and production guardrails (CORS, rate limiting, strict input validation) with deployment on Render",
+    details: `A full-stack multi-agent AI chatbot (Next.js + Tailwind, FastAPI + LangGraph) using Groq-hosted Llama-4- Scout. Designed a cost-aware multi-model routing pipeline that routes text interactions through cheaper models and invokes the multimodal model only on image upload. Implemented stateful conversation management, structured JSON outputs, and production guardrails (CORS, rate limiting, strict input validation) with deployment on Render`,
+    image: "/images/project-analytics.svg",
+    tech: ["Next.js", "Tailwind", "FastAPI", "LangGraph", "Groq", "Llama-4-Scout", "Multi-model Routing", "Stateful Conversation Management", "Structured JSON Outputs", "Production Guardrails", "Deployment on Render"],
+    github: "https://github.com/bhattarai-aavash/alex_the_pt", 
+    demo: "https://alex-the-pt.vercel.app/",
+  },
 ];
 
 export const education = [

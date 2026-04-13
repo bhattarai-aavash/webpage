@@ -31,7 +31,7 @@ export default function About() {
           <div className="mx-auto w-full max-w-sm">
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-surface">
               <Image
-                src="/images/profile-placeholder.svg"
+                src="aavash.jpeg"
                 alt="Profile placeholder"
                 width={500}
                 height={600}
