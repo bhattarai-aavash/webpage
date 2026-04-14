@@ -17,17 +17,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       transition={{ type: "spring", stiffness: 260, damping: 18 }}
       className="group rounded-2xl border border-white/10 bg-surface p-4 shadow-sm"
     >
-      <div className="overflow-hidden rounded-xl border border-white/10">
-        <img
-          src={publicAssetUrl(project.image ?? "/images/project-analytics.svg")}
-          alt={project.title}
-          width={800}
-          height={500}
-          className="h-48 w-full object-cover transition duration-300 group-hover:scale-105"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
+      {project.image ? (
+        <div className="overflow-hidden rounded-xl border border-white/10">
+          <img
+            src={publicAssetUrl(project.image)}
+            alt={project.title}
+            width={800}
+            height={500}
+            className="h-48 w-full object-cover transition duration-300 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : null}
       <h3 className="mt-4 text-xl font-semibold text-white">{project.title}</h3>
       <p className="mt-2 text-sm text-muted">{project.description}</p>
 
